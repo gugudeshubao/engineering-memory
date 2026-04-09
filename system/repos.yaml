@@ -1,0 +1,16 @@
+# One record per repository.
+# Keep this file short and index-like.
+
+repos:
+  - name: example-repo
+    path: /absolute/path/to/example-repo
+    role: short description
+    upstream: []
+    downstream: []
+    build: ""
+    test: ""
+    run: ""
+    key_dirs: []
+    key_interfaces: []
+    risks: []
+    owner: ""
