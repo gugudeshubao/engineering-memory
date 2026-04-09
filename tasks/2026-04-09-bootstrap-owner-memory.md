@@ -6,18 +6,19 @@
 - Priority: high
 - Owner: wangyang
 - Goal: create one runnable engineering-memory example using real nearby repos
+- Goal: establish the first usable control plane for the two primary repos
 - Done definition:
   - system map updated
   - repos.yaml contains real repo entries
   - at least two real repo cards created
-  - one handoff exists
+  - repo-specific handoffs exist for the two primary repos
 
 ## Symptom Or Need
 
 - Current symptom:
   - many repos exist, and repo-local AI sessions are expensive to keep warm
 - Why this matters:
-  - context switching time grows with repo count and tool count
+  - even after narrowing day-to-day work to two primary repos, switching cost is still noticeable without external memory
 
 ## Related Repos
 
@@ -31,14 +32,14 @@
 - Repo:
   - AI-Study-Warehouse
   - Why involved:
-    - first real repo card example for notes/code/experiments style repo
+    - one of the two current primary repositories
   - Key file or module:
     - README.md, codes/, docs/, scripts/
 
 - Repo:
   - flashinfer-bench-tma-thrust
   - Why involved:
-    - second real repo card example for kernel benchmark style repo
+    - one of the two current primary repositories
   - Key file or module:
     - README.md, CMakeLists.txt, gdn/, dsa/, moe/
 
@@ -83,10 +84,17 @@
   - Evidence:
     - README and template files already committed
 
+- Verified item:
+  - the two primary repos are now explicitly defined
+  - Result:
+    - done
+  - Evidence:
+    - user confirmed AI-Study-Warehouse and flashinfer-bench-tma-thrust as current main repositories
+
 ## Next Step
 
 - Immediate next step:
-  - use this memory repo on the next real cross-repo task and keep handoffs updated
+  - use this memory repo on the next real task that switches between AI-Study-Warehouse and flashinfer-bench-tma-thrust
 - Required repo:
   - engineering-memory
 - Required command or artifact:
@@ -95,6 +103,6 @@
 ## Open Questions
 
 - Question:
-  - which 5 to 10 repos should be added next after these bootstrap examples
+  - what the first real cross-repo task between the two primary repos will be
   - Blocked by:
-    - actual current high-frequency workset
+    - upcoming concrete work

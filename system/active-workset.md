@@ -14,13 +14,13 @@
 ## Active Tasks
 
 - Task:
-  - Bootstrap engineering-memory with real repo cards
+  - Stabilize memory workflow around the two primary repos
   - Packet:
     - tasks/2026-04-09-bootstrap-owner-memory.md
   - Priority:
     - high
   - Current focus:
-    - system map, repo index, two real repo cards, one task packet, one handoff
+    - use engineering-memory as the control plane for AI-Study-Warehouse and flashinfer-bench-tma-thrust
 
 ## Active Repos
 
@@ -36,20 +36,20 @@
 - Repo:
   - AI-Study-Warehouse
   - Why active:
-    - first real repo card example
+    - one of the two primary working repositories
   - Current branch:
     - main
   - Current handoff:
-    - not created yet
+    - handoffs/2026-04-09-AI-Study-Warehouse.md
 
 - Repo:
   - flashinfer-bench-tma-thrust
   - Why active:
-    - second real repo card example
+    - one of the two primary working repositories
   - Current branch:
     - main
   - Current handoff:
-    - not created yet
+    - handoffs/2026-04-09-flashinfer-bench-tma-thrust.md
 
 ## Current Hypotheses
 
@@ -60,6 +60,6 @@
     - AI-Study-Warehouse
     - flashinfer-bench-tma-thrust
   - Evidence:
-    - current cost of terminal switching across many repos
+    - current cost of terminal switching across many repos, even after narrowing primary focus to two hot repos
   - Next validation:
-    - continue using repo cards and task packets for real multi-repo work
+    - continue using repo cards, task packets, and handoffs during real switching between the two primary repos

@@ -14,7 +14,7 @@
 ## Current Bootstrap Scope
 
 当前这份 system map 先不追求覆盖你所有真实仓库。  
-它先作为“能跑的例子”，只纳入当前已经补卡的几个仓库：
+它先聚焦当前已经确认的主力范围：
 
 - `engineering-memory`
 - `AI-Study-Warehouse`
@@ -25,6 +25,8 @@
 - 上下文控制面
 - 个人学习与实验知识仓
 - 高性能 kernel / benchmark / contest 仓
+
+这里不是“示例仓库列表”，而是当前真实热工作集。
 
 ## Main Chains
 
@@ -112,6 +114,6 @@
     - Knowledge And Experiment Chain
     - Kernel Benchmark And Optimization Chain
   - Evidence:
-    - Multi-tool AI usage and many active repos
+    - Multi-tool AI usage and frequent switching between the two primary repos
   - Owner:
     - wangyang
