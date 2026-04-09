@@ -2,15 +2,70 @@
 # Keep this file short and index-like.
 
 repos:
-  - name: example-repo
-    path: /absolute/path/to/example-repo
-    role: short description
+  - name: engineering-memory
+    path: /home/wangyang/project/github/owner/story/ai_work/engineering-memory
+    role: private control plane for cross-repo memory, task packets, and handoffs
+    upstream: []
+    downstream:
+      - AI-Study-Warehouse
+      - flashinfer-bench-tma-thrust
+    build: "N/A"
+    test: "N/A"
+    run: "open README.md and current task packet"
+    key_dirs:
+      - system/
+      - repos/
+      - tasks/
+      - handoffs/
+    key_interfaces:
+      - repo-card
+      - task-packet
+      - handoff
+    risks:
+      - stale handoffs
+      - task packets not updated after repo switching
+    owner: wangyang
+
+  - name: AI-Study-Warehouse
+    path: /home/wangyang/project/github/owner/AI-Study-Warehouse
+    role: learning, notes, code snippets, and experiments warehouse
     upstream: []
     downstream: []
-    build: ""
-    test: ""
-    run: ""
-    key_dirs: []
-    key_interfaces: []
-    risks: []
-    owner: ""
+    build: "cd codes/flash-attn-handwritten && mkdir -p build && cd build && cmake .. && make -j"
+    test: "cd codes/flash-attn-handwritten/build && ctest --output-on-failure || run tests/* targets manually"
+    run: "read repo README, then enter docs/, codes/, experiments/, or scripts/ depending on task"
+    key_dirs:
+      - docs/
+      - codes/
+      - experiments/
+      - scripts/
+    key_interfaces:
+      - docs <-> codes
+      - experiments <-> scripts
+    risks:
+      - notes and runnable code drift apart
+      - commands only exist in terminal history
+    owner: wangyang
+
+  - name: flashinfer-bench-tma-thrust
+    path: /home/wangyang/project/github/owner/flashinfer-bench-tma-thrust
+    role: kernel optimization, benchmark, and competition repo for FlashInfer-related work
+    upstream: []
+    downstream: []
+    build: "mkdir -p build && cd build && cmake .. && make -j"
+    test: "modal run gdn/tests/test_correctness.py or local python tests under gdn/tests and dsa/tests"
+    run: "modal run gdn/benchmarks/bench_modal.py [--kernel decode|prefill]"
+    key_dirs:
+      - gdn/
+      - dsa/
+      - moe/
+      - scripts/
+      - src/
+    key_interfaces:
+      - benchmarks <-> kernels
+      - docs <-> benchmarks
+      - config.toml <-> solution/
+    risks:
+      - performance facts get stale across hardware and branch changes
+      - modal benchmark context separated from local build context
+    owner: wangyang

@@ -14,3 +14,9 @@
 2. 高频耦合 repo
 3. 最容易出事故的 repo
 4. 稳定且低频的 repo
+
+## Bootstrapped Examples
+
+- [engineering-memory](./engineering-memory.md)
+- [AI-Study-Warehouse](./AI-Study-Warehouse.md)
+- [flashinfer-bench-tma-thrust](./flashinfer-bench-tma-thrust.md)
